@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Check</title>
+</head>
+<body>
+    <input type="text" id="palindromeValue"/>
+    <button id="palindromeBtn">Check</button>
+    <p id="answer"></p>
+</body>
+
+<script>
+    function check() {
+        let inputValue = document.getElementById("palindromeValue").value;
+        let splitValue = inputValue.split("").reverse().join("");
+        if(splitValue == inputValue){
+            document.getElementById("answer").innerHTML = true;
+        }
+        else{
+            document.getElementById("answer").innerHTML = false;
+    }
+    }
+    document.getElementById("palindromeBtn").addEventListener("click",check);
+</script>
+</html>
